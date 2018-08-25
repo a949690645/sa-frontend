@@ -5,12 +5,12 @@ pipeline {
             agent {
                 docker {
                     image 'node:6-alpine'
-                    args '-p 80:80'
+                    args '-d -p 80:80'
                 }
             }
             steps {
                 sh 'yarn' 
-                sh 'npm start &'
+                sh 'yarn start'
             }
         }
     }
