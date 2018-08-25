@@ -6,6 +6,7 @@ node {
             sh 'yarn build'
         }
         def frontendImage = docker.build('a949690645/sentiment-analysis-frontend')
+        sh 'docker login -u a949690645 -p a19950819'
         frontendImage.push()
     }
     stage('Deploy') {
