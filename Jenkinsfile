@@ -12,8 +12,5 @@ pipeline {
                 sh 'yarn build'
             }
         }
-        stage('Deliver') {
-
-        }
     }
 }
