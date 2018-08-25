@@ -8,15 +8,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		        sh 'npm install yarn'
                 sh 'yarn' 
                 sh 'yarn build'
             }
         }
         stage('Deliver') {
-            steps {
-                sh 'yarn start'
-            }
+
         }
     }
 }
