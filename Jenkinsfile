@@ -18,7 +18,7 @@ pipeline {
                 dockerfile true
             }
             steps {
-                echo 'fuckyou'
+                sh 'tail -f /dev/null'
             }
         }
     }
