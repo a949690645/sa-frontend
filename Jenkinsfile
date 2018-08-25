@@ -11,7 +11,9 @@ node {
     }
     stage('Deploy') {
         docker.withServer('tcp://106.14.220.125:2376') {
-            docker.image('a949690645/sentiment-analysis-frontend').inside('-d -p 80:3000')
+            docker.image('a949690645/sentiment-analysis-frontend').inside('-d -p 80:3000') {
+                sh 'echo hello world'
+            }
         }
     }
 }
