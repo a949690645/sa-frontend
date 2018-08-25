@@ -17,6 +17,9 @@ pipeline {
             agent {
                 dockerfile true
             }
+            steps {
+                echo 'fuckyou'
+            }
         }
     }
 }
