@@ -10,7 +10,7 @@ pipeline {
             }
             steps {
                 sh 'yarn' 
-                sh 'yarn start &'
+                sh 'npm start &'
             }
         }
     }
